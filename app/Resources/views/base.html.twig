@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('build/common.css') }}">
+        <script src="{{ asset('build/app.js') }}"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+
+        <div class="row">
+            {% block contents %}
+            <div class="col-sm-3">
+                안녕
+            </div>
+            <div class="col-sm-3">
+                hi
+            </div>
+            <div class="col-sm-3">
+                hello
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
